@@ -6,9 +6,29 @@ from division import division
 
 import addition as ad
 import multiplication as mp
+import modulo as md
 
 
 def mainFunction() :
+    #entree = input("Entrez une opération :")
+    # if "+" in entree :
+    #     operation = '+'
+    #     operandes = entree.split('+')
+    # elif "-" in entree :
+    #     operation = '-'
+    #     operandes = entree.split('-')
+    # elif "/" in entree :
+    #     operation = '/'
+    #     operandes = entree.split('/')
+    # elif "*" in entree :
+    #     operation = '*'
+    #     operandes = entree.split('*')
+    # elif "%" in entree :
+    #     operation = "%"
+    #     operandes = entree.split("%")
+    # else :
+    #     print("Operation non authorisée.")
+    #     return
     entree = ""
     print("operation> ",end='')
     while entree !='q' :
@@ -28,6 +48,9 @@ def mainFunction() :
         elif "*" in entree :
             operation = '*'
             operandes = entree.split('*')
+        elif "%" in entree :
+            operation = "%"
+            operandes = entree.split("%")
         else :
             print("Operation non authorisée.")
             return
@@ -54,6 +77,9 @@ def mainFunction() :
 
         elif operation =='/' :
             resultat = division(left, right)
+        
+        elif operation == "%":
+            resultat = md.modulo(left,right)
         else :
             print("Operation inconnue.")
 
