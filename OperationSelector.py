@@ -1,3 +1,7 @@
+from soustraction import soustraction
+from division import division
+
+
 def mainFunction() :
     entree = input("Entrez une opération :")
     if "+" in entree :
@@ -6,6 +10,7 @@ def mainFunction() :
     elif "-" in entree :
         operation = '-'
         operandes = entree.split('-')
+        print(operandes)
     if "/" in entree :
         operation = '/'
         operandes = entree.split('/')
@@ -22,14 +27,15 @@ def mainFunction() :
 
     left = float(operandes[0])
     right = float(operandes[1])
+    print(left)
 
     if operation == '+' :
         pass
     elif operation == '-' :
-        pass
+        soustraction(left, right)
     elif operation =='*' :
         pass
     elif operation =='/' :
-        pass
+        division(left, right)
     else :
         print("Operation inconnue.")
