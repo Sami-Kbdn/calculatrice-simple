@@ -1,5 +1,6 @@
 import addition as ad
 import multiplication as mp
+import modulo as md
 
 def mainFunction() :
     entree = input("Entrez une opération :")
@@ -15,6 +16,9 @@ def mainFunction() :
     elif "*" in entree :
         operation = '*'
         operandes = entree.split('*')
+    elif "%" in entree :
+        operation = "%"
+        operandes = entree.split("%")
     else :
         print("Operation non authorisée.")
         return
@@ -40,6 +44,10 @@ def mainFunction() :
 
     elif operation =='/' :
         pass
+
+    elif operation == "%":
+        resultat = md.modulo(left,right)
+        print(f"le résultat est de : {resultat}")
     else :
         print("Operation inconnue.")
 
