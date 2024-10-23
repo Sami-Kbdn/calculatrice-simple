@@ -1,5 +1,9 @@
+
 from soustraction import soustraction
 from division import division
+
+import addition as ad
+import multiplication as mp
 
 
 def mainFunction() :
@@ -10,8 +14,9 @@ def mainFunction() :
     elif "-" in entree :
         operation = '-'
         operandes = entree.split('-')
-        print(operandes)
-    if "/" in entree :
+
+    elif "/" in entree :
+
         operation = '/'
         operandes = entree.split('/')
     elif "*" in entree :
@@ -21,21 +26,31 @@ def mainFunction() :
         print("Operation non authorisée.")
         return
     
-    if len(operandes) !=2:
-        print("Operation inconnue.")
-        return
+    #if len(operandes) !=2:
+        #print("Operation inconnue.")
+        #return
 
     left = float(operandes[0])
     right = float(operandes[1])
     print(left)
 
+    resultat = 0
+
     if operation == '+' :
-        pass
+        resultat = ad.addition(left,right)
+        print(f"le résultat est de : {resultat}")
+    
     elif operation == '-' :
-        soustraction(left, right)
+        resultat = soustraction(left, right)
+        print(f"le résultat est de : {resultat}")
     elif operation =='*' :
-        pass
+        resultat = mp.multiplication(left,right)
+        print(f"le résultat est de : {resultat}")
+
     elif operation =='/' :
-        division(left, right)
+        resultat = division(left, right)
+        print(f"le résultat est de : {resultat}")
     else :
         print("Operation inconnue.")
+
+    
