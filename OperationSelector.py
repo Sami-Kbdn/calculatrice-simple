@@ -77,6 +77,9 @@ def mainFunction() :
 
         elif operation =='/' :
             resultat = division(left, right)
+        
+        elif operation == "%":
+            resultat = md.modulo(left,right)
         else :
             print("Operation inconnue.")
 
