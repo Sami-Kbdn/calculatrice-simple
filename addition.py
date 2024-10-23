@@ -3,4 +3,3 @@ def addition (left : float, right : float) -> float :
     return result
 
 
-addition()
