@@ -1,6 +1,7 @@
 import OperationSelector as opSel
 
 print("Calculatrice simple")
+print(" ... en cours de modification")
 print()
-print("petite modif")
+
 opSel.mainFunction()
