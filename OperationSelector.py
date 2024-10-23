@@ -1,5 +1,10 @@
+
+from soustraction import soustraction
+from division import division
+
 import addition as ad
 import multiplication as mp
+
 
 def mainFunction() :
     entree = input("Entrez une opération :")
@@ -9,7 +14,9 @@ def mainFunction() :
     elif "-" in entree :
         operation = '-'
         operandes = entree.split('-')
+
     elif "/" in entree :
+
         operation = '/'
         operandes = entree.split('/')
     elif "*" in entree :
@@ -25,6 +32,7 @@ def mainFunction() :
 
     left = float(operandes[0])
     right = float(operandes[1])
+    print(left)
 
     resultat = 0
 
@@ -33,13 +41,15 @@ def mainFunction() :
         print(f"le résultat est de : {resultat}")
     
     elif operation == '-' :
-        pass
+        resultat = soustraction(left, right)
+        print(f"le résultat est de : {resultat}")
     elif operation =='*' :
         resultat = mp.multiplication(left,right)
         print(f"le résultat est de : {resultat}")
 
     elif operation =='/' :
-        pass
+        resultat = division(left, right)
+        print(f"le résultat est de : {resultat}")
     else :
         print("Operation inconnue.")
 
