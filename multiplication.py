@@ -1,4 +1,4 @@
-def multiplication (left, right):
+def multiplication (left : float, right : float) -> float : 
     result = left * right
     return result
 
