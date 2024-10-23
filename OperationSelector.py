@@ -1,3 +1,6 @@
+import addition as ad
+import multiplication as mp
+
 def mainFunction() :
     entree = input("Entrez une opération :")
     if "+" in entree :
@@ -6,7 +9,7 @@ def mainFunction() :
     elif "-" in entree :
         operation = '-'
         operandes = entree.split('-')
-    if "/" in entree :
+    elif "/" in entree :
         operation = '/'
         operandes = entree.split('/')
     elif "*" in entree :
@@ -16,20 +19,28 @@ def mainFunction() :
         print("Operation non authorisée.")
         return
     
-    if len(operandes) !=2:
-        print("Operation inconnue.")
-        return
+    #if len(operandes) !=2:
+        #print("Operation inconnue.")
+        #return
 
     left = float(operandes[0])
     right = float(operandes[1])
 
+    resultat = 0
+
     if operation == '+' :
-        pass
+        resultat = ad.addition(left,right)
+        print(f"le résultat est de : {resultat}")
+    
     elif operation == '-' :
         pass
     elif operation =='*' :
-        pass
+        resultat = mp.multiplication(left,right)
+        print(f"le résultat est de : {resultat}")
+
     elif operation =='/' :
         pass
     else :
         print("Operation inconnue.")
+
+    
