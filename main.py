@@ -1,7 +1,9 @@
 import OperationSelector as opSel
 
-print("Calculatrice simple")
-print(" ... en cours de modification encore")
+print(" ______________________________________________")
+print("|         Calculatrice simple                 |")
+print("|            q pour quitter                   |")
+print("|_____________________________________________|")
 print()
 
 opSel.mainFunction()
