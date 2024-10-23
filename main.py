@@ -1,1 +1,1 @@
-test
+print("Fichier central")
